@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Boter, Kaas en Eieren</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <header>
       <!--home button moet teruggaan naar pagina met alle games-->
-      <button class="home-btn">Home</button>
-        <h2 class="title">Boter Kaas en Eieren</h2>
+      <button class="home-btn"><strong>Home</strong></button>
+      <h2 class="title">Boter, Kaas en Eieren</h2>
     </header>
 
-<div class="game-container">
+    <div class="game-container">
+      <!--Spelerbeurt wordt veranderd per beurt-->
+      <p id="spelerBeurt"><strong>Speler X is aan de beurt</strong></p>
 
-  <!--Spelerbeurt wordt veranderd per beurt-->
-  <p id="spelerBeurt">Speler X is aan de beurt</p>
-
-  <!--div voor alle vakjes in het speelveld-->
-    <div class="buttons-boxes">
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
-      <button></button>
+      <!--div voor alle vakjes in het speelveld-->
+      <div class="bke-grid">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+        <div id="box6"></div>
+        <div id="box7"></div>
+        <div id="box8"></div>
+        <div id="box9"></div>
+      </div>
     </div>
-</div>
 
-<!--Scorebord rechts van de gamecontainer-->
-<div class="score-board">
-  <!--Speler X elementen-->
-  <p id="playerX">Speler X:</p>
-  <p id="playerXScore">0</p>
+    <!--Scorebord rechts van de gamecontainer-->
+    <div class="score-board">
+      <strong>
+        <p>SCORE</p>
+        <br />
 
-  <!--Speler O elementen-->
-  <p id="playerO">Speler O:</p>
-  <p id="playerOScore">0</p>
-</div>
+        <!--Speler X elementen-->
+        <p id="playerX">Speler X:</p>
+        <p id="playerXScore">0</p>
 
+        <!--Speler O elementen-->
+        <p id="playerO">Speler O:</p>
+        <p id="playerOScore">0</p>
+      </strong>
+    </div>
 
-<footer>Dean Tenholter&copy;</footer>
-  <!--js bestanden koppelen-->
-  <script src="js/start.js" defer></script>
-  <script src="js/model/bke.js" defer></script>
-  <script src="js/view/view.js" defer></script>
-  <script src="js/controller/controller.js" defer></script>
-</body>
+    <footer>
+      <p class="footer-text"><strong>Dean Tenholter&copy;</strong></p>
+    </footer>
+    
+    <!--js bestanden koppelen-->
+    <script src="js/start.js" defer></script>
+    <script src="js/model/bke.js" defer></script>
+    <script src="js/view/view.js" defer></script>
+    <script src="js/controller/controller.js" defer></script>
+  </body>
 </html>
