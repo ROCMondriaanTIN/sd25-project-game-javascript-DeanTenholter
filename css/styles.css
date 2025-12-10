@@ -10,7 +10,9 @@
 :root{
     --primary-color: #6399CD;
     --secondary-color: #3F76B8;
+    --reset-btn-background-color: #e80505e1;
 }
+
 
 /*header + elementen*/
 header{ 
@@ -54,20 +56,32 @@ header{
     width: 500px;
 }
 
-/*grid voor het spel*/
-.bke-grid{
-    display: grid;
-    padding: 10px;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: minmax(10px auto);
+#playerTurn{
+    display: flex;
+    justify-content: center;
+    font-size: large;
 }
 
+/*grid voor het spel*/
+#boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    padding: 10px;
+    justify-content: center;
+}
+
+
 /*styling voor hokjes van bke*/
-#box1, #box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9{
-    border: 1px solid black;
+#boxes div {
     background-color: rgb(241, 240, 240);
-    padding: 50px;
-} 
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 48px;
+}
 
 /*scorebord*/
 .score-board{
@@ -79,6 +93,19 @@ header{
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     border-radius: 5px;
+}
+
+/*reset knop en hover*/
+#reset-btn{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--reset-btn-background-color);
+    border: 3px solid black;
+    border-radius: 7px;
+    justify-self: center;
+    font-size: larger;
+    color: rgb(241, 232, 232);
 }
 
 /*footer + elementen*/
