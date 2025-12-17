@@ -1,9 +1,10 @@
-console.log("Connected start")
+console.log("Connected start");
 
-'use strict'
+'use strict';
 
 window.onload = start;
 
 function start() {
     bindBoxes();
+    updatePlayerTurn(activeSymbol);
 }

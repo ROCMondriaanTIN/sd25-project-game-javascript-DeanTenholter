@@ -1,6 +1,6 @@
-console.log("Connected model")
+console.log("Connected model");
 
-'use strict'
+'use strict';
 
 let activeSymbol = "X";
 

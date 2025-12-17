@@ -1,8 +1,9 @@
-console.log("Connected view")
+console.log("Connected view");
 
-'use strict'
+'use strict';
 
 const boxes = document.querySelectorAll('#boxes div');
+const playerTurn = document.querySelector('#playerTurn');
 
 function bindBoxes() {
     for (let b = 0; b < boxes.length; b++) {
@@ -14,4 +15,8 @@ function showFiches() {
     for (let b = 0; b < boxes.length; b++) {
         boxes[b].innerHTML = fiches[b];
     }
+}
+
+function updatePlayerTurn(symbol) {
+    playerTurn.innerHTML = "Speler " + symbol + " is aan de beurt";
 }

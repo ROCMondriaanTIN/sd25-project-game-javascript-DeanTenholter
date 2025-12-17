@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /*kleuren in variabelen*/
@@ -12,7 +12,6 @@
     --secondary-color: #3F76B8;
     --reset-btn-background-color: #e80505e1;
 }
-
 
 /*header + elementen*/
 header{ 
@@ -54,12 +53,14 @@ header{
     margin: 50px;
     padding: 25px;
     width: 500px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.500);
 }
 
 #playerTurn{
     display: flex;
     justify-content: center;
     font-size: large;
+    font-weight: bold;
 }
 
 /*grid voor het spel*/
@@ -83,6 +84,15 @@ header{
     font-size: 48px;
 }
 
+#boxes div:hover {
+    background-color: #dbe9f7;
+    transition: 0.2s;
+}
+
+#boxes div:active {
+    transform: scale(0.97);
+}
+
 /*scorebord*/
 .score-board{
     justify-self: right;
@@ -95,10 +105,10 @@ header{
     border-radius: 5px;
 }
 
-/*reset knop en hover*/
+/*reset knop + extras*/
 #reset-btn{
     display: flex;
-    margin: 5px;
+    margin: 8px;
     padding: 5px;
     background-color: var(--reset-btn-background-color);
     border: 3px solid black;
@@ -106,6 +116,17 @@ header{
     justify-self: center;
     font-size: larger;
     color: rgb(241, 232, 232);
+     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+#reset-btn:hover {
+    background-color: #ff3b3b;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#reset-btn:active {
+    transform: scale(0.97);
 }
 
 /*footer + elementen*/
