@@ -14,3 +14,7 @@ function handleBoxClick(event) {
         console.log("Fiche not allowed at box " + index);
     }
 }
+
+function reset() {
+   resetBtn  
+}
