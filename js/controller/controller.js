@@ -15,6 +15,8 @@ function handleBoxClick(event) {
     }
 }
 
+
+
 function reset() {
-   resetBtn  
+   resetBtn
 }

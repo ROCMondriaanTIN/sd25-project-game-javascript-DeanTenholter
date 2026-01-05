@@ -146,3 +146,16 @@ footer{
     padding: 7px;
     width: auto;
 }
+
+
+/*----------Login Scherm-----------*/
+
+
+.login-form{
+    background-color: var(--secondary-color);
+    margin: 50px;
+    padding: 75px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+}
