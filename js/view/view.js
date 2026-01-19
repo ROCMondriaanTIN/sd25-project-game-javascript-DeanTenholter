@@ -1,7 +1,6 @@
 console.log("Connected view");
 
-'use strict';
-
+const winnerText = document.querySelector('#winner-text');
 const boxes = document.querySelectorAll('#boxes div');
 const playerTurn = document.querySelector('#playerTurn');
 const resetBtn = document.querySelector('#reset-btn');
