@@ -15,3 +15,7 @@ function handleBoxClick(event) {
         console.log("Fiche not allowed at box " + index);
     }
 }
+
+function gameEnd() {
+    window.location.reload()
+}
