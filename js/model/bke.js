@@ -16,77 +16,18 @@ function changeActiveSymbol() {
   activeSymbol = activeSymbol === "X" ? "O" : "X";
 }
 
-//controleert het symbool in een vakje en baseert daarop of er een winnaar is
 function isWinner() {
   if (
-    fiches[0] == activeSymbol &&
-    fiches[1] == activeSymbol &&
-    fiches[2] == activeSymbol
+    (fiches[0] === activeSymbol && fiches[1] === activeSymbol && fiches[2] === activeSymbol) ||
+    (fiches[3] === activeSymbol && fiches[4] === activeSymbol && fiches[5] === activeSymbol) ||
+    (fiches[6] === activeSymbol && fiches[7] === activeSymbol && fiches[8] === activeSymbol) ||
+    (fiches[0] === activeSymbol && fiches[4] === activeSymbol && fiches[8] === activeSymbol) ||
+    (fiches[2] === activeSymbol && fiches[4] === activeSymbol && fiches[6] === activeSymbol) ||
+    (fiches[0] === activeSymbol && fiches[3] === activeSymbol && fiches[6] === activeSymbol) ||
+    (fiches[1] === activeSymbol && fiches[4] === activeSymbol && fiches[7] === activeSymbol) ||
+    (fiches[2] === activeSymbol && fiches[5] === activeSymbol && fiches[8] === activeSymbol)
   ) {
-    winnerText.innerHTML = ("Speler " + activeSymbol + " heeft gewonnen!")
-    //gameEnd();
+    return true;
   }
-
-  if (
-    fiches[3] == activeSymbol &&
-    fiches[4] == activeSymbol &&
-    fiches[5] == activeSymbol
-  ) {
-    winnerText.innerHTML = ("Speler " + activeSymbol + " heeft gewonnen!")
-    //gameEnd();
-  }
-
-  if (
-    fiches[6] == activeSymbol &&
-    fiches[7] == activeSymbol &&
-    fiches[8] == activeSymbol
-  ) {
-    winnerText.innerHTML = ("Speler " + activeSymbol + " heeft gewonnen!")
-    //gameEnd();
-  }
-
-  if (
-    fiches[0] == activeSymbol &&
-    fiches[4] == activeSymbol &&
-    fiches[8] == activeSymbol
-  ) {
-    winnerText.innerHTML = ("Speler " + activeSymbol + " heeft gewonnen!")
-    //gameEnd();
-  }
-
-  if (
-    fiches[2] == activeSymbol &&
-    fiches[4] == activeSymbol &&
-    fiches[6] == activeSymbol
-  ) {
-    winnerText.innerHTML = ("Speler " + activeSymbol + " heeft gewonnen!")
-    //gameEnd();
-  }
-
-  if (
-    fiches[0] == activeSymbol &&
-    fiches[3] == activeSymbol &&
-    fiches[6] == activeSymbol
-  ) {
-    winnerText.innerHTML = ("Speler " + activeSymbol + " heeft gewonnen!")
-    //gameEnd();
-  }
-
-  if (
-    fiches[1] == activeSymbol &&
-    fiches[4] == activeSymbol &&
-    fiches[7] == activeSymbol
-  ) {
-    winnerText.innerHTML = ("Speler " + activeSymbol + " heeft gewonnen!")
-    //gameEnd();
-  }
-
-  if (
-    fiches[2] == activeSymbol &&
-    fiches[5] == activeSymbol &&
-    fiches[8] == activeSymbol
-  ) {
-    winnerText.innerHTML = ("Speler " + activeSymbol + " heeft gewonnen!")
-    //gameEnd();
-  }
+  return false;
 }
