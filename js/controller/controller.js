@@ -61,13 +61,14 @@ function startNewRound() {
   winnerText.innerHTML = "";
 }
 
+//resetknop -> score naar 0 en leeg speelveld
 function resetClick() {
-  for (let i = 0; i < fiches.length; i++) {
-    fiches[i] = "";
-  }
 
-  playerXScore.innerHTML = Number(playerXScore.innerHTML) = 0;
-  playerOScore.innerHTML = Number(playerOScore.innerHTML) = 0;
+  playerXScore.innerHTML = 0;
+  playerOScore.innerHTML = 0;
+
+  startNewRound();
 }
 
-resetBtn.addEventListener("click", resetClick());
+//eventlistener resetknop
+resetBtn.addEventListener("click", resetClick);
