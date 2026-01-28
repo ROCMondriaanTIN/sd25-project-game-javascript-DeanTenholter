@@ -10,7 +10,7 @@ const resetBtn = document.querySelector('#reset-btn');
 const playerXScore = document.querySelector('#playerXScore');
 const playerOScore = document.querySelector('#playerOScore');
 
-//
+//voor het klikken in het speelveld
 function bindBoxes() {
   for (let b = 0; b < boxes.length; b++) {
     boxes[b].addEventListener('click', handleBoxClick);
