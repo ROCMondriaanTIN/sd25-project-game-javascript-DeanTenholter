@@ -16,12 +16,12 @@ function handleBoxClick(event) {
   showFiches();
   moves++;
 
-//als deze functie waar is -> winnaar tekst maken + na 5 sec nieuwe ronde + punt naar winner functie aanroepen
+//als deze functie waar is -> winnaar tekst maken + na 3 sec nieuwe ronde + punt naar winner functie aanroepen
   if (isWinner()) {
     winnerText.innerHTML = "<h3>Speler " + activeSymbol + " heeft gewonnen!</h3>";
     addPointToWinner(activeSymbol);
     gameOver = true;
-    setTimeout(startNewRound, 5000);
+    setTimeout(startNewRound, 3000);
     return;
   }
 
@@ -60,3 +60,14 @@ function startNewRound() {
   updatePlayerTurn(activeSymbol);
   winnerText.innerHTML = "";
 }
+
+function resetClick() {
+  for (let i = 0; i < fiches.length; i++) {
+    fiches[i] = "";
+  }
+
+  playerXScore.innerHTML = Number(playerXScore.innerHTML) = 0;
+  playerOScore.innerHTML = Number(playerOScore.innerHTML) = 0;
+}
+
+resetBtn.addEventListener("click", resetClick());
